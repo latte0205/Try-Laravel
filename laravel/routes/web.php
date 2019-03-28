@@ -14,4 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/test', function () {
+//     echo "123";
+// });
+
+// Route::get('/index','frontend\frontendcontroller@index')->name('index');
+
+Route::get('/test', 'frontend\frontendcontroller@test')->name('test');
+// Route::get('/test', function() {
+//     echo "hi";
+// });
+
 //start dev
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('students', 'StudentController');
